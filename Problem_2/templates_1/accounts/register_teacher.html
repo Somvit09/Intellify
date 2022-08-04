@@ -1,0 +1,134 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+
+      <div class="content">
+
+
+
+        <div class="row">
+          <div class="col-md-10">
+            <div class="card">
+
+              <form method="POST">
+
+                {% csrf_token %}
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                    </div>
+                    {{ form.username }}
+                  </div>
+                </div>
+                <span class="text-error">{{ form.username.errors }}</span>
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                    </div>
+                    {{ form.first_name }}
+                  </div>
+                </div>
+                <span class="text-error">{{ form.first_name.errors }}</span>
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                    </div>
+                    {{ form.last_name }}
+                  </div>
+                </div>
+                <span class="text-error">{{ form.last_name.errors }}</span>
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    </div>
+                    {{ form.email }}
+                  </div>
+                </div>
+                <span class="text-error">{{ form.email.errors }}</span>
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                    </div>
+                    {{ form.subject }}
+                  </div>
+                </div>
+                <span class="text-error">{{ form.subject.errors }}</span>
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                    </div>
+                    {{ form.classes_taught }}
+                  </div>
+                </div>
+                <span class="text-error">{{ form.classes_taught.errors }}</span>
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                    </div>
+                    {{ form.contact_number }}
+                  </div>
+                </div>
+                <span class="text-error">{{ form.contact_number.errors }}</span>
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                    </div>
+                    {{ form.teacher_id }}
+                  </div>
+                </div>
+                <span class="text-error">{{ form.teacher_id.errors }}</span>
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                    </div>
+                    {{ form.password1 }}
+                  </div>
+                </div>
+                <span class="text-error">{{ form.password1.errors }}</span>
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                    </div>
+                    {{ form.password2 }}
+                  </div>
+                </div>
+                <span class="text-error">{{ form.password2.errors }}</span>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary mt-4">Create account</button>
+                  <a href="{% url 'login' %}" class="form-control">Already have account? Click here</a>
+                </div>
+              </form>
+
+            </div>
+          </div>
+      </div>
+
+
+
+
+      </div>
+
+
+
+  {% endblock %}

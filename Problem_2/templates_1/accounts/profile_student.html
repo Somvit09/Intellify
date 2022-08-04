@@ -1,0 +1,118 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+      <div class="content">
+
+
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="title">Student Profile</h2>
+        <h5>Welcome! {{first_name}} {{last_name}}</h5>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="row">
+            <div class="col-md-5 pr-md-1">
+              <div class="form-group">
+                <label>Student ID</label>
+                <br>
+                <strong>{{student_id}}</strong>
+              </div>
+            </div>
+            <div class="col-md-3 px-md-1">
+              <div class="form-group">
+                <label>Username</label>
+                <br>
+                <strong>{{username}}</strong>
+              </div>
+            </div>
+            <div class="col-md-4 pl-md-1">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <br>
+                <strong>{{email}}</strong>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 pr-md-1">
+              <div class="form-group">
+                <label>First Name</label>
+                <br>
+                <strong>{{first_name}}</strong>
+              </div>
+            </div>
+            <div class="col-md-6 pl-md-1">
+              <div class="form-group">
+                <label>Last Name</label>
+                <br>
+                <strong>{{last_name}}</strong>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>Standard</label>
+                <br>
+                <strong>{{standard}}</strong>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 pr-md-1">
+              <div class="form-group">
+                <label>Section</label>
+                <br>
+                <strong>{{section}}</strong>
+              </div>
+            </div>
+            <div class="col-md-4 px-md-1">
+              <div class="form-group">
+                <label>Stream</label>
+                <br>
+                <strong>{{stream}}</strong>
+              </div>
+            </div>
+            <div class="col-md-4 px-md-1">
+              <div class="form-group">
+                <label>Roll No</label>
+                <br>
+                <strong>{{roll_no}}</strong>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card card-user">
+      <div class="card-body">
+        <p class="card-text">
+          <div class="author">
+            <div class="block block-one"></div>
+            <div class="block block-two"></div>
+            <div class="block block-three"></div>
+            <div class="block block-four"></div>
+            <a href="javascript:void(0)">
+              <img class="avatar" src="https://appsrv1-147a1.kxcdn.com/black-dashboard/img/emilyz.jpg" alt="Bill Gates photo - when buys a Linux.">
+              <h5 class="title">
+                {{first_name}}
+              </h5>
+            </a>
+            <p class="description">
+              {{email}}
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+{% endblock %}

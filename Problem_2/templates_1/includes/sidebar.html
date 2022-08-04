@@ -1,0 +1,64 @@
+<div class="sidebar">
+  <div class="sidebar-wrapper">
+    <div class="logo">
+      <a href="/" class="simple-text logo-mini">
+        DB
+      </a>
+      <a href="/" class="simple-text logo-normal">
+        Django Black
+      </a>
+    </div>
+
+    <ul class="nav">
+
+        {% if not request.user.is_authenticated %}
+        <li class=" active ">
+            <a href="{% url 'register_teacher' %}">
+          <i class="tim-icons icon-chart-pie-36"></i>
+          <p>Teacher's Registration</p>
+        </a>
+        </li>
+        <li class=" active ">
+            <a href="{% url 'login' %}">
+          <i class="tim-icons icon-chart-pie-36"></i>
+          <p>Teacher's Login</p>
+        </a>
+        </li>
+        <li class=" active ">
+            <a href="{% url 'register_student' %}">
+          <i class="tim-icons icon-chart-pie-36"></i>
+          <p>Student's Registration</p>
+        </a>
+        </li>
+        <li class=" active ">
+            <a href="{% url 'login' %}">
+          <i class="tim-icons icon-chart-pie-36"></i>
+          <p>Student's Login</p>
+        </a>
+        </li>
+        {% else %}
+      <li class="">
+        <a href="{% url 'profile' %}">
+          <i class="tim-icons icon-single-02"></i>
+          <p>User Profile</p>
+        </a>
+      </li>
+      <li class="">
+        <a href="{% url 'home' %}">
+          <i class="tim-icons icon-single-02"></i>
+          <p>Dashboard</p>
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'logout' %}" >
+          <i class="tim-icons icon-button-power"></i>
+          <p>Logout</p>
+        </a>
+      </li>
+      {% endif %}
+
+
+    </ul>
+
+  </div>
+</div>

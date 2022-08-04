@@ -1,0 +1,111 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+      <div class="content">
+
+
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="title">Teacher Profile</h2>
+        <h5>Welcome! {{first_name}} {{last_name}}</h5>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="row">
+            <div class="col-md-5 pr-md-1">
+              <div class="form-group">
+                <label>Teacher ID</label>
+                <br>
+                <strong>{{teacher_id}}</strong>
+              </div>
+            </div>
+            <div class="col-md-3 px-md-1">
+              <div class="form-group">
+                <label>Username</label>
+                <br>
+                <strong>{{username}}</strong>
+              </div>
+            </div>
+            <div class="col-md-4 pl-md-1">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <br>
+                <strong>{{email}}</strong>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 pr-md-1">
+              <div class="form-group">
+                <label>First Name</label>
+                <br>
+                <strong>{{first_name}}</strong>
+              </div>
+            </div>
+            <div class="col-md-6 pl-md-1">
+              <div class="form-group">
+                <label>Last Name</label>
+                <br>
+                <strong>{{last_name}}</strong>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>Subject</label>
+                <br>
+                <strong>{{subject}}</strong>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 pr-md-1">
+              <div class="form-group">
+                <label>Class Taught</label>
+                <br>
+                <strong>{{classes_taught}}</strong>
+              </div>
+            </div>
+            <div class="col-md-4 px-md-1">
+              <div class="form-group">
+                <label>Contact Info</label>
+                <br>
+                <strong>{{contact_number}}</strong>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card card-user">
+      <div class="card-body">
+        <p class="card-text">
+          <div class="author">
+            <div class="block block-one"></div>
+            <div class="block block-two"></div>
+            <div class="block block-three"></div>
+            <div class="block block-four"></div>
+            <a href="javascript:void(0)">
+              <img class="avatar" src="https://appsrv1-147a1.kxcdn.com/black-dashboard/img/emilyz.jpg" alt="Bill Gates photo - when buys a Linux.">
+              <h5 class="title">
+                {{first_name}}
+              </h5>
+            </a>
+            <p class="description">
+              {{email}}
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+{% endblock %}
