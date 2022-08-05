@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 # Create your models here.
 
-class MyAccountManager(BaseUserManager):
+class MyAccountManager(BaseUserManager):  # BaseUserManager for creating object in the model
     def create_account(self, first_name, last_name, username, password=None):
         user = self.model(
             username=username,
@@ -34,7 +34,7 @@ class RegisterTeacher(AbstractBaseUser):
         return self.username
 
 
-class RegisterStudent(AbstractBaseUser):
+class RegisterStudent(AbstractBaseUser):  # BaseUserManager for creating object in the model
     username = models.CharField(max_length=250)
     first_name = models.CharField(max_length=250)
     last_name = models.CharField(max_length=250)
