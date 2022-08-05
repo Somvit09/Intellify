@@ -142,7 +142,6 @@ def profile(request):
         return redirect('login')
 
 
-@login_required(login_url="login")
 def index(request):
     return render(request, 'home/index.html')
 

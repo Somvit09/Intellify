@@ -12,16 +12,16 @@
     <ul class="nav">
 
         {% if not request.user.is_authenticated %}
+        <li class="">
+          <a href="{% url 'home' %}">
+            <i class="tim-icons icon-chart-pie-36"></i>
+            <p>Home</p>
+          </a>
+        </li>
         <li class=" active ">
             <a href="{% url 'register_teacher' %}">
           <i class="tim-icons icon-chart-pie-36"></i>
           <p>Teacher's Registration</p>
-        </a>
-        </li>
-        <li class=" active ">
-            <a href="{% url 'login' %}">
-          <i class="tim-icons icon-chart-pie-36"></i>
-          <p>Teacher's Login</p>
         </a>
         </li>
         <li class=" active ">
@@ -33,7 +33,7 @@
         <li class=" active ">
             <a href="{% url 'login' %}">
           <i class="tim-icons icon-chart-pie-36"></i>
-          <p>Student's Login</p>
+          <p>User Login</p>
         </a>
         </li>
         {% else %}
